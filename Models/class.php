@@ -1,20 +1,22 @@
 <?php
 
  //Classe
- class movie {
+ class Movie {
 
     // Proprietà della classe
    public $title;
    public $genre;
    public $year;
+   public $image;
 
 
    // Costruttore della classe
-   public function __construct($title, $genre, $year){
+   public function __construct($title, $genre, $year, $image){
 
        $this -> title = $title;
        $this -> genre = $genre;
        $this -> year = $year;
+       $this->image = $image;
 
    }
 
@@ -39,5 +41,14 @@
 
    }
 
+    // Metodo per ottenere l'URL dell'immagine del film
+    public function getImage() {
 
-}   
+        return $this->image;
+
+    }
+
+
+} 
+
+?>
